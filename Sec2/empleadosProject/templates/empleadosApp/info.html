@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Información de empleado</title>
+    <link rel="stylesheet" href=" {% static 'css/style.css' %} ">
+</head>
+
+<body>
+    <h1>Información de mi empleado</h1>
+
+    <img src="{% static 'img/foto.jpg' %} " alt="">
+
+    <h3>Datos: 😊</h3>
+    <p><b>Nombre: </b> {{nombre}}</p>
+    <p><b>Apellido: </b> {{apellido}}</p>
+    <p><b>Edad: </b> {{edad}}</p>
+
+    <h3>Mis hobbies favoritos: </h3>
+
+    <ul>
+        {% for hobbie in hobbies %}
+        <li>{{hobbie}}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Sus mejores amigos son: </h3>
+    <ol>
+        {% for amigo in amigos %}
+        <li>{{amigo}}</li>
+        {% endfor %}
+    </ol>
+
+
+</body>
+
+</html>
